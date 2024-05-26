@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
 import { useAccount } from 'wagmi';
 import { OwnerAdress, ownerPercentage } from '@/lib/address';
@@ -202,11 +202,11 @@ export default function Home() {
             }
           </p> */}
 
-          <div className="md:px-24 md:-mt-10 mt-5  px-5">
+          {/* <div className="md:px-24 md:-mt-10 mt-5  px-5">
         {isConnected ? (
           <button
             onClick={async () => await handleTokenTransfer()}
-            className="md:w-[400px] w-full text-xl h-[50px] bg-primary text-white rounded-3xl"
+            className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl"
           >
             Link Now
           </button>
@@ -216,12 +216,12 @@ export default function Home() {
             onClick={() => {
               setIsModalOpen(true);
             }}
-            className="md:w-[400px] w-full text-xl h-[50px] bg-primary text-white rounded-3xl"
+            className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl"
           >
             Connect Wallet
           </button>
         )}
-      </div>
+      </div> */}
 
           {/* <p className="mt-5">Get Started in 3 Easy Steps</p>
           <div className="mt-3">

