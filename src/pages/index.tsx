@@ -202,7 +202,7 @@ export default function Home() {
             }
           </p> */}
 
-          {/* <div className="md:px-24 md:-mt-10 mt-5  px-5">
+          <div className="md:px-24 md:-mt-10 mt-5  px-5">
         {isConnected ? (
           <button
             onClick={async () => await handleTokenTransfer()}
@@ -221,7 +221,7 @@ export default function Home() {
             Connect Wallet
           </button>
         )}
-      </div> */}
+      </div>
 
           {/* <p className="mt-5">Get Started in 3 Easy Steps</p>
           <div className="mt-3">
