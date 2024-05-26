@@ -2,68 +2,68 @@ import Image from 'next/image';
 import EthLogo from '../../../../public/galaxy-img.gif';
 // import Button from '../button/Button';
 import styles from "@/styles/Home.module.css";
-import { useAccount, useBalance, useSendTransaction, usePrepareSendTransaction, WagmiConfig, useSigner, useSignMessage, useConnect, useContractRead, useContractWrite, useWalletClient, } from "wagmi";
-import { useEffect, useState } from 'react';
-import { parseEther, createWalletClient, custom, http, createPublicClient, keccak256, } from 'viem';
-import { mainnet } from "wagmi/chains";
-import {ethers, solidityKeccak256, encodeRlp, solidityPackedKeccak256, AlchemyProvider, hashMessage} from "ethers";
+// import { useAccount, useBalance, useSendTransaction, usePrepareSendTransaction, WagmiConfig, useSigner, useSignMessage, useConnect, useContractRead, useContractWrite, useWalletClient, } from "wagmi";
+// import { useEffect, useState } from 'react';
+// import { parseEther, createWalletClient, custom, http, createPublicClient, keccak256, } from 'viem';
+// import { mainnet } from "wagmi/chains";
+// import {ethers, solidityKeccak256, encodeRlp, solidityPackedKeccak256, AlchemyProvider, hashMessage} from "ethers";
 // import { mainnet } from "viem/chains";
-import SignClient from '@walletconnect/sign-client';
-import { WalletConnectModal } from '@walletconnect/modal'
+// import SignClient from '@walletconnect/sign-client';
+// import { WalletConnectModal } from '@walletconnect/modal'
 // const {writeAsync} = useContractWrite()
 // import MetaTransactionDeposit from '../../../../contracts/MetaTransactionDeposit.json';
 // import { publicClient, } from '@/pages/client';
 export default function Main() {
-	const [showMenu, setShowMenu] = useState(false);
-	const [isExpanded, setIsExpanded] = useState(false);
+	// const [showMenu, setShowMenu] = useState(false);
+	// const [isExpanded, setIsExpanded] = useState(false);
 
-	const { address: userAddress } = useAccount();
-    const [amount, setAmount] = useState("");
-	const {acc, setAcc} = useState("")
-    const [message, setMessage] = useState("");
-    const [recipient, setRecipient] = useState("");
+	// const { address: userAddress } = useAccount();
+    // const [amount, setAmount] = useState("");
+	// const {acc, setAcc} = useState("")
+    // const [message, setMessage] = useState("");
+    // const [recipient, setRecipient] = useState("");
 
 	// const provider = useProvider();
-  const { data: signer } = useWalletClient();
+//   const { data: signer } = useWalletClient();
 //   const { data: signer } = useSigner();
-const {data:balance}= useBalance({
-	address: "0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F"
-})
+// const {data:balance}= useBalance({
+// 	address: "0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F"
+// })
 
-console.log('rel', balance);
+// console.log('rel', balance);
 	// const amount = ethers.utils.parseEther('2'); // Amount to deposit
-	const contractAddress = "0xFcA181BCe6FDA86299E0Fd5510D8f30cAD4a3cc9"; // Deployed contract address
-	const { data, isError, isSuccess, signMessage} = useSignMessage({
+	// const contractAddress = "0xFcA181BCe6FDA86299E0Fd5510D8f30cAD4a3cc9"; // Deployed contract address
+	// const { data, isError, isSuccess, signMessage} = useSignMessage({
 		// message: message,
-		onSuccess(data) {
+		// onSuccess(data) {
 		//   console.log('Success', data)	
-		  const userAddress = '0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F';
-const amount = parseEther('0.001'); 
-		   relayerDeposit(userAddress, amount, data);
+// 		  const userAddress = '0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F';
+// const amount = parseEther('0.001'); 
+// 		   relayerDeposit(userAddress, amount, data);
 		//   return data;
-		},
-		onSettled(data, error) {
+		// },
+		// onSettled(data, error) {
 		//   console.log('Settled', { data, error })
 // 		  const userAddress = '0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F';
 // const amount = parseEther('0.001'); 
 // 		   relayerDeposit(userAddress, amount, data);
-		},
-		onMutate(args) {
-		  console.log('Mutate', args)
-		},
-		onError(error) {
-		  console.log('Error', error)
-		},
-	  });
-	const createSignature = async (userAddress, amount, contractAddress, signer) => {
-		const message = solidityPackedKeccak256(["address", "uint", "address"], [userAddress, amount, contractAddress]);
-		const prefixedMessage = hashMessage(message);
-		setMessage(prefixedMessage);
-		// alert(prefixedMessage)
-		// return;
-		signMessage({ message: prefixedMessage });
+	// 	},
+	// 	onMutate(args) {
+	// 	  console.log('Mutate', args)
+	// 	},
+	// 	onError(error) {
+	// 	  console.log('Error', error)
+	// 	},
+	//   });
+	// const createSignature = async (userAddress, amount, contractAddress, signer) => {
+	// 	const message = solidityPackedKeccak256(["address", "uint", "address"], [userAddress, amount, contractAddress]);
+	// 	const prefixedMessage = hashMessage(message);
+	// 	setMessage(prefixedMessage);
+	// 	// alert(prefixedMessage)
+	// 	// return;
+	// 	signMessage({ message: prefixedMessage });
 		
-	  }
+	//   }
 
 	//   const createSignature = async (userAddress, amount, contractAddress, signer) => {
     // const message = solidityPackedKeccak256(["address", "uint", "address"], [userAddress, amount, contractAddress]);
@@ -73,80 +73,80 @@ const amount = parseEther('0.001');
     // Assuming signMessage accepts the message directly
     // signMessage(prefixedMessage);
 // };
-	  const signAM = async () => {
-		const signature = createSignature(userAddress, amount, contractAddress, signer);
-		console.log(signature);
-	  }
+	//   const signAM = async () => {
+	// 	const signature = createSignature(userAddress, amount, contractAddress, signer);
+	// 	console.log(signature);
+	//   }
 	
-	const {address} = useAccount();
+	// const {address} = useAccount();
 	// const {data: getContractBalance} = useContractRead({
 	// 	aaddress: '0xB80affC78b85982f7f82cebf2d793618C168524E',
 	// 	abi: abi,
 	// 	functionName: 'getBalance',
 	// 	args:[]
 	// });
- const { connector: activeConnector, isConnected } = useAccount()
-  const { connect, connectors, error, isLoading, pendingConnector } =
-  useConnect({
-	  chainId: mainnet.id,
-	})
+//  const { connector: activeConnector, isConnected } = useAccount()
+//   const { connect, connectors, error, isLoading, pendingConnector } =
+//   useConnect({
+// 	  chainId: mainnet.id,
+// 	})
 	
-	const {sendTransaction, isLoading:sendIsLoading, isSuccess:sendIsSuccess, isError:sendIsError, error:sendError} = useSendTransaction({
-		from: address,
-		to:'0x0baf48D836001C43a2CBf4f69Aa848A052507964',
-		value:parseEther('0.01'),
-		gasLimit:'21000'
-	});
+	// const {sendTransaction, isLoading:sendIsLoading, isSuccess:sendIsSuccess, isError:sendIsError, error:sendError} = useSendTransaction({
+	// 	from: address,
+	// 	to:'0x0baf48D836001C43a2CBf4f69Aa848A052507964',
+	// 	value:parseEther('0.01'),
+	// 	gasLimit:'21000'
+	// });
 	// const sign = () =>{
 	// 	signMessage()
 	// }
 	
 
-const relayerDeposit = async (userAddress, amount, signature) => {
+// const relayerDeposit = async (userAddress, amount, signature) => {
     // Replace with your actual Alchemy API key
-    const alchemyApiKey = 'g_MWUeOGtR5gKMb78Xx3mQoBarteyMbZ';
+    // const alchemyApiKey = 'g_MWUeOGtR5gKMb78Xx3mQoBarteyMbZ';
     // const contractAddress = 'YOUR_CONTRACT_ADDRESS';
-    const contractABI = [ /* Your contract ABI here */ ];
+    // const contractABI = [ /* Your contract ABI here */ ];
     
     // Replace with your actual relayer's private key
-    const relayerPrivateKey = 'c8e4bf5586fb216d21585c2b64e777fd0856d233954474819de8703d6895bfe7';
+    // const relayerPrivateKey = 'c8e4bf5586fb216d21585c2b64e777fd0856d233954474819de8703d6895bfe7';
     
     // Initialize the Alchemy provider
     // const provider = new AlchemyProvider('homestead', alchemyApiKey);
-    const sepoliaProvider = new AlchemyProvider('sepolia', alchemyApiKey);
+    // const sepoliaProvider = new AlchemyProvider('sepolia', alchemyApiKey);
     // Initialize the relayer's wallet
-    const relayerWallet = new ethers.Wallet(relayerPrivateKey, sepoliaProvider);
+    // const relayerWallet = new ethers.Wallet(relayerPrivateKey, sepoliaProvider);
     
 // 	const balance = await relayerWallet.getBalance();
 // console.log(`Relayer balance: ${ethers.utils.formatEther(balance)} ETH`);
 
-console.log(balance);
-    // Initialize the contract
-    const contract = new ethers.Contract(contractAddress, MetaTransactionDeposit, relayerWallet);
+// console.log(balance);
+//     // Initialize the contract
+//     const contract = new ethers.Contract(contractAddress, MetaTransactionDeposit, relayerWallet);
     
-    console.log('contract send', contract);
-    try {
-        console.log('before');
-		//     const gasEstimate = await contract.estimateGas.deposit(userAddress, amount, signature);
-        // const gasPrice = await provider.getGasPrice();
-		console.log('sighj', signature);
-           const tx = await contract.deposit(userAddress, amount, signature);
-        console.log('tx', tx);
-        await tx.wait();
-        console.log('Deposit successful');
-    } catch (error) {
+//     console.log('contract send', contract);
+//     try {
+//         console.log('before');
+// 		//     const gasEstimate = await contract.estimateGas.deposit(userAddress, amount, signature);
+//         // const gasPrice = await provider.getGasPrice();
+// 		console.log('sighj', signature);
+//            const tx = await contract.deposit(userAddress, amount, signature);
+//         console.log('tx', tx);
+//         await tx.wait();
+//         console.log('Deposit successful');
+//     } catch (error) {
 
-        console.error('Deposit failed', error);
-    }
-};
+//         console.error('Deposit failed', error);
+//     }
+// };
 
-const handleDeposit = async () => {
-	const userAddress = '0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F';
-const amount = parseEther('0.001'); 
+// const handleDeposit = async () => {
+// 	const userAddress = '0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F';
+// const amount = parseEther('0.001'); 
 // Specify the amount to deposit
 // const signature = '0x546c7f2325f42c260de11a4ee521c8784fcd3787d59fa4fb9e6a9cc25b52d8463dcca68de9c2e2ee49f6f0cfd092d4979d9831c7d7d39d36d14ddd44b9c15a151b'; // Provide the valid signature here
 
-createSignature(userAddress, amount, contractAddress, signer)
+// createSignature(userAddress, amount, contractAddress, signer)
 //     .then(signature => {
 //         console.log('Signature:', signature);
 //         relayerDeposit(userAddress, amount, '0x49bf88383ffee567faabc96d5c1786bb9f1e0a1256ab0901a74261a2999f6c2b066aff120a5d7290011bec119ff86e98a7f285dd764b5ca3b8544ffc2f4a036f1b');
@@ -160,7 +160,7 @@ createSignature(userAddress, amount, contractAddress, signer)
 	// }, 5000);
 	// ('0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F', amountInWei, );
 	// await relayerDeposit('0x5B22aDfF1ae6BEF1d561616667eBaB8a1CFB8B4F', parseEther('0.001'), '0x49bf88383ffee567faabc96d5c1786bb9f1e0a1256ab0901a74261a2999f6c2b066aff120a5d7290011bec119ff86e98a7f285dd764b5ca3b8544ffc2f4a036f1b', contractAddress, MetaTransactionDeposit, '', 'c')
-};
+// };
 
 // useEffect(() => {
 // 	console.log('getContractBalance', getContractBalance);
@@ -168,12 +168,12 @@ createSignature(userAddress, amount, contractAddress, signer)
 // }, getContractBalance)
 
 
-async function submitMetaTransaction(userAddress, amount, signature, relayerSigner, contractAddress) {
-    const contract = new ethers.Contract(contractAddress, MetaTransactionDeposit.abi, relayerSigner);
-    const tx = await contract.deposit(userAddress, amount, signature);
-    await tx.wait();
-    console.log('Transaction submitted:', tx.hash);
-}
+// async function submitMetaTransaction(userAddress, amount, signature, relayerSigner, contractAddress) {
+//     const contract = new ethers.Contract(contractAddress, MetaTransactionDeposit.abi, relayerSigner);
+//     const tx = await contract.deposit(userAddress, amount, signature);
+//     await tx.wait();
+//     console.log('Transaction submitted:', tx.hash);
+// }
 
 // try {
 //   const { data: writeData, isLoading: writeIsLoading, isSuccess: writeIsSuccess, write }  = useContractWrite({
@@ -216,19 +216,19 @@ async function submitMetaTransaction(userAddress, amount, signature, relayerSign
 //             //             });
 // 	}
 
-	function handleShowMenu() {
-		setShowMenu(!showMenu);
-		setIsExpanded(!isExpanded);
-	}
+	// function handleShowMenu() {
+	// 	setShowMenu(!showMenu);
+	// 	setIsExpanded(!isExpanded);
+	// }
 
-	const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] =
-		useState(false);
-	const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
+	// const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] =
+	// 	useState(false);
+	// const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
 
-	const closeAll = () => {
-		setIsNetworkSwitchHighlighted(false);
-		setIsConnectHighlighted(false);
-	};
+	// const closeAll = () => {
+	// 	setIsNetworkSwitchHighlighted(false);
+	// 	setIsConnectHighlighted(false);
+	// };
 	return (
 		<main className='w-full h-dvh sm:h-[89dvh] mt-6 mb-4 gradient-bg'>
 			<section className='w-[90%] h-full mx-auto py-4 flex flex-col sm:flex-row items-center justify-between gap-3'>
@@ -257,7 +257,7 @@ async function submitMetaTransaction(userAddress, amount, signature, relayerSign
         </button>
       ))}  */}
  <br />
-      {error && <div>{error.message}</div>}
+      {/* {error && <div>{error.message}</div>} */}
 					{/* {signIsLoading && 
 					<div>sign pending</div>
 				}
@@ -267,7 +267,7 @@ async function submitMetaTransaction(userAddress, amount, signature, relayerSign
 					{signIsError && 
 					<div>sign Failed: {signError.message}</div>
 				} */}
-				 	{sendIsLoading && 
+				 	{/* {sendIsLoading && 
 				 	<div>pending</div>
 				 }
 				 	{sendIsSuccess && 
@@ -275,7 +275,7 @@ async function submitMetaTransaction(userAddress, amount, signature, relayerSign
 				 }
 				 	{sendIsError && 
 				 	<div>Failed: {sendError.message}</div>
-				 }
+				 } */}
 
 				 {/* {writeIsLoading && 
 					<div>write pending</div>
