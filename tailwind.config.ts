@@ -16,6 +16,7 @@ module.exports = {
       green: "#00CB51",
       red: "#FF0000",
       transparent: "transparent",
+      notwhite: "#e0e0e0",
     },
     fontFamily: {
       grotesk: "Space Grotesk",

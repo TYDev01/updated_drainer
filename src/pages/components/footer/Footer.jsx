@@ -10,12 +10,12 @@ import {
 
 export default function Footer() {
 	return (
-		<footer className='w-full bg-light' style={{ background: '#002345' }}>
-			<section className='w-[90%] flex items-center md:items-start justify-center md:justify-between flex-col p-[4%] mx-auto' style={{marginTop: '9rem'}}>
+		<footer className='w-full bg-light'>
+			<section className='w-[90%] flex items-center md:items-start justify-center md:justify-between flex-col p-[4%] mx-auto'>
 				<section className='flex items-start justify-between flex-wrap w-full'>
 					<div className='footer_left'>
 						<div className=' footer_logo'>
-							<h2 className='text-5xl font-bold'>Dappsconnect</h2>
+							<h2 className='text-4xl font-bold'>D-Appsconnect</h2>
 						</div>
 
 						<p className='w-[13.6875rem] text-base my-4'>
@@ -84,7 +84,7 @@ export default function Footer() {
 
 						<p className=' font-normal text-[0.825rem] mb-2 flex items-center justify-start md:justify-end gap-2'>
 							<FaRegCopyright className='copyright' />
-							<span>2024 galaxy Labs, Inc.</span>
+							<span>2024 D-Appsconnect Labs, Inc.</span>
 						</p>
 
 						<p>All Rights Reserved</p>
@@ -92,8 +92,8 @@ export default function Footer() {
 				</section>
 
 				<div className='w-full'>
-					<h1 className='text-[#003162] font-bold text-center w-full text-[3.118rem] sm:text-[4.45rem]  md:text-[9.75rem] tracking-[0.1rem] sm:tracking-[0.5rem] md:tracking-[0.7rem] '>
-						Dappsconnect
+					<h1 className='text-[#003162] font-bold text-center w-full text-[2.118rem] sm:text-[4.45rem]  md:text-[9.75rem] tracking-[0.1rem] sm:tracking-[0.5rem] md:tracking-[0.7rem] '>
+						D-Appsconnect
 					</h1>
 				</div>
 			</section>

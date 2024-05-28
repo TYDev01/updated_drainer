@@ -50,10 +50,7 @@ body {
 	font-family: var(--font-base);
 	background-color: var(--color-bg);
 	color: var(--color-grey-100);
-	background-image: url("/pattern.png");
-
-  /* color: white; */
-  background: #001e3c;
+	/* background-image: url("/pattern.png"); */
 }
 
 pre,
@@ -87,8 +84,3 @@ li {
 .gradient-bg {
 	background: linear-gradient(to bottom, #001e3c, #007fff, #00509f, #002345);
 }
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-

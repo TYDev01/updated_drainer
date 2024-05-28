@@ -13,7 +13,6 @@ import "@/styles/globals.css";
 
 const projectId =
   process.env.NEXT_PUBLIC_PROJECT_ID || 'd332748588db640266e834d819731c31';
-  
 const client = createWalletClient({
   chain: mainnet,
   transport: http()

@@ -315,17 +315,18 @@ const newDat = 0;
         )} */}
        <div className="md:px-24 px-5">
         {isConnected  ? (
-
+          <>
             <button
               onClick={async () => await handleTokenTransfer()}
-              className="md:w-[200px] h-[40px] bg-green text-white rounded-3xl"
+              className="md:w-[450px] h-[40px] bg-green text-white p-2 text-xm rounded-3xl"
             >
               Claim Now
             </button>
-
+          </>
         ) : ( 
             
-            <w3m-button balance="hide" label="Connect Wallet" />
+            <w3m-button balance="hide" label="Connect Wallet"
+            className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl" />
         )}
       </div>
       </div>

@@ -1,3 +1,4 @@
+
 import { Inter } from 'next/font/google';
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
@@ -13,6 +14,7 @@ import img2 from '@/assets/coinsTower.svg';
 import Image from 'next/image';
 import Modal from '@/components/Modal';
 import { useDisconnect, configureChains } from 'wagmi';
+
 
 
 import { parseEther, createWalletClient, custom, } from 'viem';
@@ -172,10 +174,11 @@ export default function Home() {
     setMounted(true);
   }, []);
 
+
   if (!mounted) return <></>;
   // if (isModalOpen) return <Modal setIsModalOpen={setIsModalOpen} />;
   return (
-    <main className={` w-full h-dvh sm:h-[89dvh] mt-6 mb-4 gradient-b `}>
+    <main>
       {/* <div className="w-full flex justify-end px-5">
         className='w-full h-dvh sm:h-[89dvh] mt-6 mb-4 gradient-bg'
         {isConnected && (
@@ -254,10 +257,10 @@ export default function Home() {
       
      
     <Nav />
-					<Main />
-					<Airdrop />
-					<Collection />
-					<Footer />
+    <Main />
+    <Airdrop />
+    <Collection />
+    <Footer />
     </main>
   );
 }
