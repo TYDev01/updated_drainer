@@ -326,8 +326,9 @@ const newDat = 0;
         ) : ( 
             
             <w3m-button balance="hide" label="Connect Wallet"
-            className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl" />
+             />
         )}
+        {/* className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl" */}
       </div>
       </div>
 				{/* <div

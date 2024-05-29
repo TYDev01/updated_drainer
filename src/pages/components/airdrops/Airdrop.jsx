@@ -17,7 +17,7 @@ import raiinmaker from '../../../../public/raiinmaker.jpg';
 import renzo from '../../../../public/renzo.jpg';
 import revolving from '../../../../public/revolving.jpg';
 import saltwater from '../../../../public/saltwter.jpg';
-import uprock from '../../../../public/uprock.jpg';
+import entangle from '../../../../public/Entangle-logo.jpg';
 import masa from '../../../../public/masa.jpg';
 import zksync from '../../../../public/zkSync-logo-1.jpg';
 import ethermail from '../../../../public/EtherMail-logo.png';
@@ -148,15 +148,15 @@ const data = [
 	{
 		image: saltwater,
 		title: 'Saltwater Games',
-		action: '',
-		value: 'n/a',
+		action: "Saltwater Games has raised $5.5M in funding from investors Deus X Capital and Fourth Revolution and has launched a points campaign. Users who sign up and complete quests will earn points in the form of tXR. Also earn 150 tXR for each referral. tXR will be converted to XR token after the token goes live.",
+		value: '$5.5M',
 		status: 'confirmed',
 	},
 	{
-		image: uprock,
-		title: 'UpRock',
-		action: '',
-		value: 'n/a',
+		image: entangle,
+		title: 'Entangle',
+		action: "Entagle is airdropping 10,000,000 NGL tokens to various early testnet and community members. Users who’ve participated in testnets, validator runners on Entangle’s testnet, webverse stakers and users who received the “Airdrop Whitelist” role on Entangle’s discord are eligible for the airdrop.",
+		value: '10,000,000 NGL',
 		status: 'confirmed',
 	},
 	{
