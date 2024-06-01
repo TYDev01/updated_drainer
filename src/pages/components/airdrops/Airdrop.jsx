@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Modal from '../newmodal/Newmodal';
 
-import another from '../../../../public/another.png';
+// import another from '../../../../public/another.png';
 import aperture from '../../../../public/aperture.jpg';
 import blackwing from '../../../../public/blackwing.jpg';
 import drift from '../../../../public/drift.jpg';
@@ -24,8 +24,165 @@ import ethermail from '../../../../public/EtherMail-logo.png';
 import xtreme from '../../../../public/Xtremeverse-logo.png';
 import zyfi from '../../../../public/Zyfi-logo.jpg';
 import nyan from '../../../../public/rhPh2p8V_400x400.png';
+import phaver from '../../../../public/Phaver-logo.jpg';
+import htx from '../../../../public/IMG_7913.jpeg';
+import cryptopia from '../../../../public/th9slQSL_400x400.jpg';
+import ethana from '../../../../public/Ethena-logo.png';
+import memecoin from '../../../../public/Memecoin-logo.jpg';
+import notional from '../../../../public/Notional-logo.jpg';
+import ambient from '../../../../public/Ambient-logo.jpg';
+import zkpass from '../../../../public/JkCgx5bQ_400x400-1.jpg';
+import zoth from '../../../../public/ZOTH-logo.jpg';
+import moongate from '../../../../public/Moongate-logo.jpg';
+import sophon from '../../../../public/9k4jAYsY_400x400.jpg';
+import solv from '../../../../public/Solv-Protocol.jpg';
+import debridge from '../../../../public/deBridge-logo.jpg';
+import karak from '../../../../public/Karak-logo.jpg';
+import overtrip from '../../../../public/48mlZCiu_400x400.jpg';
+import coti from '../../../../public/COTI-logo.jpg';
+import sharpe from '../../../../public/Sharpe-Labs-logo.jpg';
+import kelp from '../../../../public/Kelp-DAO-logo.jpg';
+import beoble from '../../../../public/beoble-logo.jpg';
+import xyro from '../../../../public/oQtnZZS5_400x400.jpg';
+import synther from '../../../../public/SYNTHR-logo.jpg';
+import lava from '../../../../public/Lava-logo.jpg';
+import pixels from '../../../../public/Pixels-logo.jpg';
+
 
 const data = [
+	{
+		image: pixels,
+		title: 'PIXELS',
+		action: "Pixels have airdropped PIXEL to users who signed up and completed simple tasks. Users who participated in Airdrop Season 1 and Season 2 can now withdraw the tokens as mentioned below. Users who had staked RON by February 8th at 2:00:00 GMT are also eligible for an additional 20M PIXEl airdrop. PIXEL is also live on Binance, so you can withdraw your tokens to Binance if you wish to.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: lava,
+		title: 'LAVA',
+		action: "Lava has raised $15M in funding from investors like HashKey Capital and Jump Capital and has also confirmed to launch the “LAVA” token. They have introduced a points system where users can earn points by signing up, changing their wallet’s blockchain connection to Lava, and using the wallet as usual. Also, earn 10% of the points from each referral. Users who collect points may get an airdrop when their token goes live.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: synther,
+		title: 'SYNTHR',
+		action: "SYNTHR has confirmed to launch thier own token “SYNTHR’ and has launched a testnet campaign. Users who complete testnet action will earn points in the form of syCREDITS. Also get more points from each referrals. User who collect syCREDITS may get an airdrop when their token goes live.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: xyro,
+		title: 'XYRO',
+		action: "XYRO is giving away free NFTs and airdrop points to Whitelist users. These NFTs will act as an access key to the beta test campaign and competitive airdrop stage 2. Users can participate and start earning the roles eligible for Whitelist NFT mint by following the steps below.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: beoble,
+		title: 'BEOBLE',
+		action: "beoble had raised $2M in funding from investors like HashKey Capital and Samsung Next. They have launched BBL token and has confirmed to do an airdrop to users who collect cat points. Sign up at beoble and complete simple tasks to earn cat points. Also, earn more points for each referral. The snapshot of eligible users will be taken on March 31st, 2024 and users must hold at least 0.03 ETH or 150 BBL to be eligible for the airdrop.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: kelp,
+		title: 'KELP DAO',
+		action: "Kelp DAO doesn’t have their own governance token but has launched a points program called Kelp Miles and hinted at rewarding users. To start earning Kelp miles and EigenLayer points, stake ETH or other LSTs like stETH or provide liquidity to the rsETH pools. Users who collect Kelp Miles will likely get an airdrop if they launch their own token.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: sharpe,
+		title: 'SHARPE',
+		action: "Sharpe has confirmed to launch their token “SHARPE” and do an airdrop to users who collect points. Sign up at Sharpe to receive 100 Sharpe points. Also, invest in the Sharpe Earn strategies such as Lido stETH and Rocketpool rETH to earn more points. The points will get converted to SHARPE tokens after the token goes live. Sharpe has confirmed to launch their token $SHARPE and is organising an #airdrop for users who collect points. Here are all the details",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: coti,
+		title: 'COTI',
+		action: "COTI is airdropping a total of 40M COTI tokens to past and new COTI participants. Visit the COTI treasury and deposit COTI tokens to share the total pool. For every Treasury deposit, you’ll start accumulating APY rewards that are redeemable at any given time. On top of that, you’ll get a share of 40M COTI V2 Tokens rewards that will be distributed after the COTI V2 TGE, which is planned for Q4 this year",
+		value: '40M COTI',
+		status: 'confirmed',
+	},
+	{
+		image: overtrip,
+		title: 'OVERTRIP',
+		action: "OverTrip is airdropping a total of 25,000,000 TRIP tokens for completing easy social tasks. Users can complete various tasks, including referrals, social media tasks, and in-game achievements, to earn free points. The more points you accumulate, the greater your chances of earning more TRIP tokens. Invite your friends to get up to 3% of their earnings.",
+		value: '25,000,000 TRIP',
+		status: 'confirmed',
+	},
+	{
+		image: karak,
+		title: 'KARAK',
+		action: "Karak has raised $48M in funding from investors like Coinbase and Pantera Capital and has launched an XP campaign. Users who sign up and stake LSTs from Ethereum, Arbitrum or Karak to Karak will earn XPs. Also, earn more XPs from each referral. They don’t have their own token yet but are very likely to launch one in the future. The XPs would likely be converted to their token if the token goes live.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: debridge,
+		title: 'deBridge',
+		action: "deBridge has raised $5.5M in funding from investors like Animoca Brands and ParaFi Capital and has also launched a points campaign. Users who make swaps on their cross-chain bridge can earn points based on their volume. Also, earn 25% of the points from each referral. They have announced the launch of their governance token “DBR” and has allocated 20% of the total supply for community & launch. They’ve also confirmed to allocate an undisclosed percentage of the supply for “Genesis community airdrop”. Early users who use the bridge and collect points will get the airdrop when their token goes live.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: solv,
+		title: 'SOLV PROTOCOL',
+		action: "Solv Protocol has raised $11M in funding from investors like Binance Labs and Apollo Capital and has launched an XP campaign. They’ve also confirmed to launch their token “SOLV” and do an airdrop of SOLV tokens for users who collect XPs. Deposit tokens and collect XPs to be eligible for the airdrop when the token goes live. You can also earn 10% of the XPs from each referral.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: sophon,
+		title: 'SOPHON',
+		action: "Sophon has raised $10 million in a funding round from Paper Ventures, Maven 11 Capital, The Spartan Group, SevenX Ventures, OKX Ventures, and HTX Ventures. The team has also announced partnerships with Beam and Aethir Cloud.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: moongate,
+		title: 'MOONGATE',
+		action: "Moongate has confirmed to launch their token “MGT” and plans to airdrop to users who participate in their airdrop campaign. Sign up for the open v2 beta of Moongate’s platform and engage in various quests. Participants engaging with Moongate’s beta platform will be eligible for an airdrop upon the official launch of the MGT Token.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: zoth,
+		title: 'ZOTH',
+		action: "Zoth has raised $2.5M in funding from investors like Blockchain Founders Fund and Wormhole and is airdropping 20,000,000 ZOTH to the testnet airdrop participants. Join the testnet campaign and complete simple tasks to earn XPs. Invite your friends to earn more XPs. The amount of XPs you earn will determine your share of the ZOTH airdrop.",
+		value: '20,000,000 ZOTH',
+		status: 'confirmed',
+	},
+	{
+		image: zkpass,
+		title: 'ZKPASS',
+		action: "zkPass has raised $2.5 million from investors including Sequoia China, Binance Labs, and OKX Ventures. zkPass is airdropping free ZKP credits to its airdrop participants. Visit their campaign page, sign up, and complete easy social tasks to earn free $ZKP credits.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: ambient,
+		title: 'AMBIENT',
+		action: "Ambient has raised a total of $6.5M from investors like Circle and Naval Ravikant and has launched a points system. They don’t have their own token yet but could launch their own token in the future. Early users who trade on the platform and collect points may get an airdrop if they launch their token. They’ve also allocated 100% of the Blast airdrop they receive to its users.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: notional,
+		title: 'NOTIONAL',
+		action: "Notional is airdropping 0.75% of the total supply to various early users of the platform. A snapshot was taken on July 4th, 2021 at 00:00 GMT and users who have borrowed, lent or provided liquidity more than or equal to 50 DAI/USDC as of the snapshot date are eligible to claim between 600 NOTE and 1800 NOTE.",
+		value: '0.75% of the total supply',
+		status: 'confirmed',
+	},
+	{
+		image: memecoin,
+		title: 'MEMECOIN',
+		action: "Memecoin has airdropped MEME to users who’ve participated in the Memecoin farming campaign. Users who’ve participated in the airdrop campaign have now received the tokens. There’s no claim required as the amount has already been staked on Stakeland.",
+		value: '25% of the total supply',
+		status: 'confirmed',
+	},
 	{
 		image: nyan,
 		title: 'Nyan Heroes',
@@ -45,6 +202,34 @@ const data = [
 		title: 'Xtremeverse',
 		action: "Xtremeverse has raised $6M in funding from investors like Hashed Emergent and Yield Guild Games and has launched a points campaign. Connect your wallet and Twitter to start earning points. Hold their NFT token “XTREME” to earn additional points. Also get 100 points from each referral. They’ve confirmed to launch “XVERSE” token in the future and do an airdrop to users who collect points.",
 		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: phaver,
+		title: 'Phaver',
+		action: "Phaver is airdropping 3% of the total supply of SOCIAL tokens to airdrop participants. Users who’ve connected a Lens profile, Farcaster profile, and at least one Cred item to Phaver and reach at least Level 2 in the app are eligible to receive points. The points will be converted to SOCIAL tokens at 1:1 ratio after TGE.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: htx,
+		title: 'HTX',
+		action: "HTX is a leading global digital asset financial service provider. Its accumulative turnover has exceeded 1.2 trillion USD and once became the world's largest digital asset exchange with a global share of 50%.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: ethana,
+		title: 'ETHENA',
+		action: "Ethena is airdropping 5% of the total supply of ENA tokens to users who interacted with Ethena and collected shards. Users who collected shards until April 1st, 2023 are eligible for the airdrop. Season 2 of the airdrop campaign has also begun, which will airdrop at least 10% of the total supply and continue until September 2nd, 2024 (or when the USDe supply hits $5 billion). In Season 2, “Shards” have been replaced with “Sats”.",
+		value: '15% of the total supply',
+		status: 'confirmed',
+	},
+	{
+		image: cryptopia,
+		title: 'CRYPTOPIA',
+		action: "Cryptopia is airdropping 25,000,000 TOS tokens to airdrop participants. Complete easy social tasks, participate in missions, accomplish milestones, and invite your friends to earn free power points. Maximize your points by completing more tasks to increase your share of the TOS tokens.",
+		value: '87,500 USD',
 		status: 'confirmed',
 	},
 	{
