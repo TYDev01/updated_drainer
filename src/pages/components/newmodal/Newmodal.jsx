@@ -35,6 +35,7 @@ function Newmodal({ onClose, token }) {
                     {token && token.status && (
                         <p>Status: <span className="text-green">{token.status}</span></p>
                     )}
+                    <button>Claim now</button>
                 </div>
             </div>
         </div>
