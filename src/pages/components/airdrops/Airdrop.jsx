@@ -47,9 +47,113 @@ import xyro from '../../../../public/oQtnZZS5_400x400.jpg';
 import synther from '../../../../public/SYNTHR-logo.jpg';
 import lava from '../../../../public/Lava-logo.jpg';
 import pixels from '../../../../public/Pixels-logo.jpg';
+import pike from '../../../../public/pike.jpg';
+import undead from '../../../../public/Undeads-logo.jpg';
+import presearch from '../../../../public/Presearch-logo.jpg';
+import eesee from '../../../../public/eesee-logo.jpg';
+import reveel from '../../../../public/Reveel-logo.jpg';
+import swell from '../../../../public/Swell-logo.jpg';
+import frame from '../../../../public/Frame-logo.png';
+import hinkal from '../../../../public/Hinkal-logo.png';
+import aori from '../../../../public/Aori-logo.jpg';
+import altitude from '../../../../public/Altitude-logo.jpg';
+import connext from '../../../../public/Connext-logo.png';
+import lightlink from '../../../../public/Lightlink-logo.jpg';
+import letit from '../../../../public/Letit-logo.jpg';
 
 
 const data = [
+	{
+		image: letit,
+		title: 'LETIT',
+		action: "Letit is airdropping 10 LETIT tokens to users who complete the airdrop tasks. Chat with their Telegram bot and complete the social tasks to be eligible to receive the tokens. The tokens will be credited after the token gets listed on a centralized exchange.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: lightlink,
+		title: 'LIGHTLINK',
+		action: "Lightlink has confirmed to launch an own token called “LL” in the future and has allocated 6% of the supply to airdrop. Connect your Goerli wallet to their testnet bridge and make transactions to likely become eligible for an airdrop.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: connext,
+		title: 'Connext',
+		action: "As predicted in our speculative airdrop section, Connext is airdropping 100,000,000 NEXT to early platform users. Users who transferred five or more times with an average value of at least $15 per transaction and a total volume exceeding $200 or provided at least $1,500 in liquidity to the Connext network for a minimum of 1 day are eligible for the airdrop.",
+		value: '100,000,000 NEXT',
+		status: 'confirmed',
+	},
+	{
+		image: altitude,
+		title: 'ALTITUDE',
+		action: "Altitude has allocated 5% of the token supply to strategic airdrops. Use the bridge, stake assets and provide liquidity to earn free ALTD tokens.",
+		value: '5% of the token supply',
+		status: 'confirmed',
+	},
+	{
+		image: aori,
+		title: 'AORI',
+		action: "Aori has confirmed to launch their own token called “AORI” and has allocated 5.3% of the total supply for airdrop. Early users who do testnet trades on the platform may get an airdrop when the token goes live.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: hinkal,
+		title: 'HINKAL',
+		action: "Hinkal has raised $4.1 million in funding from investors like Draper Associates and NGC Ventures. They don’t have their own token yet but could launch one in the future. Early users who use the platform to deposit, swap, stake, etc, may get an airdrop if they launch their token.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: frame,
+		title: 'FRAME',
+		action: "Frame is airdropping FRAME tokens to anyone who has traded an NFT in the past two years. If you are eligible, you will be able to claim free FRAME tokens based on your NFT activity.",
+		value: 'n/a',
+		status: 'confirmed',
+	},
+	{
+		image: swell,
+		title: 'SWELL',
+		action: "Swell has raised a total of $3.8M in funding from investors like Framework Ventures and Mark Cuban. They’ve launched a Voyage campaign in which they’re airdropping a total of 50,000,000 SWELL tokens to users who stake ETH.",
+		value: '50,000,000 SWELL',
+		status: 'confirmed',
+	},
+	{
+		image: reveel,
+		title: 'REVEEL',
+		action: "Reveel has raised a total of $1.3M in funding from investors like Binance. Users who create a revenue path or use the bridge on the platform may likely become eligible for an airdrop if they ever launch their own token.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
+	{
+		image: eesee,
+		title: 'EESEE',
+		action: "eesee has raised $2.85M from investors like SevenX Ventures and Maven Capital. They’re conducting a testnet campaign in which users who do simple testnet challenges will get points and share a minimum of $400,000 ESE. The more participants there are, the higher the pool. Also, get more points for referring your friends.",
+		value: '$400,000 ESE',
+		status: 'confirmed',
+	},
+	{
+		image: presearch,
+		title: 'PRESEARCH',
+		action: "Presearch is airdropping a total of 50M PRE tokens to search stakers and node runners. A snapshot of the search stakers and node runners was taken on December 29th, 2023. Eligible users will get free PRE based on the stakes as well as a bonus of 2% of the staked tokens per month. New users will get 75 PRE for signing up with our exclusive link and a bonus of 1% of the staked tokens per month.",
+		value: '50M PRE',
+		status: 'confirmed',
+	},
+	{
+		image: undead,
+		title: 'UNDEADS',
+		action: "Undeads is airdropping a total of $3,000,000 worth of UDS tokens to users who do simple tasks. Visit the Dmissions page and complete simple tasks to share 2,500,000 UDS, users who play the Undeads game will share 5,000,000 UDS and users who hold any of Undeads NFTs will share 2,500,000 UDS.",
+		value: '$3,000,000 UDS',
+		status: 'confirmed',
+	},
+	{
+		image: pike,
+		title: 'PIKE',
+		action: "Pike doesn’t have their own token yet, but they’ve hinted at launching one. Users who lend or borrow tokens on the platform may get an airdrop if they launch their own token.",
+		value: 'n/a',
+		status: 'unconfirmed',
+	},
 	{
 		image: pixels,
 		title: 'PIXELS',
