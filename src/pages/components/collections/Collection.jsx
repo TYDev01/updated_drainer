@@ -12,7 +12,7 @@ import HD from '../../../../public/HD.png';
 import doodles from '../../../../public/doodles.png';
 import deGods from '../../../../public/deGods.png';
 import underground from '../../../../public/underground.png';
-import gyrasulci from '../../../../public/gyrasulci.jpg';
+// import gyrasulci from '../../../../public/gyrasulci.jpg';
 
 const data = [
 	// {
