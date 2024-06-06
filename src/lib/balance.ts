@@ -9,3 +9,5 @@ export const getTokenBalance = async (
   const decimals = await contract.decimals();
   return { bal, decimals};
 };
+
+

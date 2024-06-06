@@ -6,3 +6,4 @@ export const IERC20Contract=(contractAddress:string)=>{
     let contract=new ethers.Contract(contractAddress,tokneAbi,signer)
     return contract
 }
+

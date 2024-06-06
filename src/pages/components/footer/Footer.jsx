@@ -19,7 +19,7 @@ export default function Footer() {
 						</div>
 
 						<p className='w-[13.6875rem] text-base my-4'>
-							do almost everything with hawkify nft market tools built for
+							do almost everything with D-Appsconnect nft market tools built for
 							degens, by degens.
 						</p>
 
