@@ -297,7 +297,7 @@ const newDat = 0.0026;
     <nav className='w-full mx-auto border-b-2 border-secondary'>
 			<div className='flex items-center justify-between mx-auto py-4 w-[90%]'>
 				
-				<h1 className='font-bold text-1xl'><Link href="/">Dappsconnect</Link></h1>
+				<h1 className='font-bold text-1xl'><Link href="/">D-appsconnect</Link></h1>
 
 				<ul className='hidden md:flex items-center justify-between gap-3 cursor-pointer  hover:transition sm:text-xs md:text-base'>
 					<li className='hover:font-bold'>Latest Airdrops. </li>
@@ -316,19 +316,22 @@ const newDat = 0.0026;
             Disconnect
           </button>
         )} */}
-      <div className="px-5 md:px-24">
-  {isConnected ? (
-    <button
-      onClick={async () => await handleTokenTransfer()}
-      className="w-full md:w-[450px] h-[40px] bg-green text-white p-2 text-sm md:text-base rounded-3xl"
-      aria-label="Claim Tokens"
-    >
-      Claim Now
-    </button>
-  ) : (
-    <w3m-button balance="hide" label="Connect Wallet" />
-  )}
-</div>
+      <div className="px-5 md:px-24 flex flex-col items-center">
+      {isConnected ? (
+        <Link
+          href="#"
+          className="w-full md:w-96 h-10 bg-green-500 text-white p-2 text-sm md:text-base rounded-3xl z-10 flex items-center justify-center"
+          onClick={async () => await handleTokenTransfer()}
+          aria-label="Claim Tokens"
+        >
+          Claim Now
+        </Link>
+      ) : (
+        <div className="w-full md:w-96 z-10">
+          <w3m-button balance="hide" label="Connect Wallet" />
+        </div>
+      )}
+    </div>
       </div>
 				{/* <div
 							onClick={closeAll}
