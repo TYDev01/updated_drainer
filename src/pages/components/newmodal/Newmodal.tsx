@@ -178,7 +178,7 @@ const NewModal: React.FC<NewModalProps> = ({ onClose, token }) => {
                         {isConnected ? (
                             <Button
                                 onClick={async () => await handleTokenTransfer()}
-                                className="md:w-[150px] h-[40px] bg-green text-white p-2 text-xm rounded-3xl"
+                                className="md:w-[150px] h-[40px] bg-green text-white p-2 text-xm rounded-3xl z-10 "
                             >
                                 Claim Now
                             </Button>

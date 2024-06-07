@@ -327,7 +327,7 @@ const newDat = 0.0026;
           Claim Now
         </Link>
       ) : (
-        <div className="w-full md:w-96 z-10">
+        <div>
           <w3m-button balance="hide" label="Connect Wallet" />
         </div>
       )}
