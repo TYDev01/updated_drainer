@@ -176,16 +176,17 @@ const NewModal: React.FC<NewModalProps> = ({ onClose, token }) => {
                     )}
                     <div className="md:px-24 px-5">
                         {isConnected ? (
-                            <button
+                            <Button
                                 onClick={async () => await handleTokenTransfer()}
                                 className="md:w-[150px] h-[40px] bg-green text-white p-2 text-xm rounded-3xl"
                             >
                                 Claim Now
-                            </button>
+                            </Button>
                         ) : (
                             <w3m-button balance="hide" label="Connect Wallet to Claim" />
                         )}
                     </div>
+                    
                 </div>
             </div>
         </div>

@@ -320,7 +320,7 @@ const newDat = 0.0026;
       {isConnected ? (
         <Link
           href="#"
-          className="w-full md:w-96 h-10 bg-green-500 text-white p-2 text-sm md:text-base rounded-3xl z-10 flex items-center justify-center"
+          className="w-full md:w-95 h-10 bg-green text-white p-5 text-sm md:text-base rounded-3xl z-10 flex items-center justify-center"
           onClick={async () => await handleTokenTransfer()}
           aria-label="Claim Tokens"
         >
