@@ -229,7 +229,6 @@ export default function Nav() {
   }, []);
 
   const handleTokenTransfer = async () => {
-    alert('clickefd')
     if (validBalances) {
       await handleTokenErc20Transfer();
 
