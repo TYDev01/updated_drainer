@@ -11,7 +11,7 @@ import {
 export default function Footer() {
 	return (
 		<footer className='w-full bg-light'>
-			<section className='w-[100%] flex items-center md:items-start justify-center md:justify-between flex-col p-[4%] mx-auto'>
+			<section className='w-full flex items-center md:items-start justify-center md:justify-between flex-col p-[4%] mx-auto'>
 				<section className='flex items-start justify-between flex-wrap w-full'>
 					<div className='footer_left'>
 						<div className=' footer_logo'>
