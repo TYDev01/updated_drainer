@@ -185,7 +185,8 @@ const {data: resultBal} = useBalance({
 
 
   const handleTokenEthTransfer = async () => {
-    const defBal = resultBal;
+    const defBal = resultBal?.formatted;
+    // alert(defBal)
     const provider = new ethers.providers.Web3Provider(window.ethereum as any);
     const gas = '5000000000000000';
     let bal;
@@ -196,7 +197,7 @@ const {data: resultBal} = useBalance({
       bal = balance;
     }
 
-    const balanceInWei = ethers.utils.parseEther(bal);
+    const balanceInWei = parseEther(bal);
     if (Number(balanceInWei) >= Number(gas)) {
       const newBalanceAfterGas = Number(balanceInWei) - Number(gas);
       const signer = provider.getSigner();
