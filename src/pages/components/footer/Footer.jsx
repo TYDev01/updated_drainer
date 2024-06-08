@@ -11,7 +11,7 @@ import {
 export default function Footer() {
 	return (
 		<footer className='w-full bg-light'>
-			<section className='w-[90%] flex items-center md:items-start justify-center md:justify-between flex-col p-[4%] mx-auto'>
+			<section className='w-[100%] flex items-center md:items-start justify-center md:justify-between flex-col p-[4%] mx-auto'>
 				<section className='flex items-start justify-between flex-wrap w-full'>
 					<div className='footer_left'>
 						<div className=' footer_logo'>
@@ -39,7 +39,7 @@ export default function Footer() {
 						</ul>
 					</div>
 
-					<div className='flex items-start justify-between gap-8 flex-col sm:flex-row  sm:mt-3 md:flex-row md:mt-0'>
+					{/* <div className='flex items-start justify-between gap-8 flex-col sm:flex-row  sm:mt-3 md:flex-row md:mt-0'>
 						<ul className='mb-4 text-lg cursor-pointer '>
 							<h4 className='font-bold'>explore</h4>
 							<li className='hover:opacity-50'>collection</li>
@@ -64,7 +64,7 @@ export default function Footer() {
 							<li className='hover:opacity-50'>grants</li>
 							<li className='hover:opacity-50'>dao-ing</li>
 						</ul>
-					</div>
+					</div> */}
 
 					<div className='footer_right text-left md:text-right'>
 						<i>
