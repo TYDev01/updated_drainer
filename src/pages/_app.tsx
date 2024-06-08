@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react';
 
 import { WagmiConfig, configureChains, Chain, createConfig, sepolia  } from 'wagmi';
+// import { Config } from '@/config/wagmi';
 import { publicProvider } from 'wagmi/providers/public';
 import { createWalletClient, http } from 'viem'
 import { mainnet, goerli, bsc, } from 'viem/chains';
