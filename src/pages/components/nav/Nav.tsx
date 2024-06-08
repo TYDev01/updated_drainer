@@ -115,21 +115,23 @@ export default function Nav() {
   const { disconnect } = useDisconnect();
 
   const gasBuffer = 100000000;
-
-  const getUserBalace = async () => {
-    try {
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum as any
-      );
-      const balanceInWei = await provider.getBalance(String(address));
-      const balanceInEth = ethers.utils.formatEther(balanceInWei);
-      setBalance(balanceInEth);
-      console.log(balanceInEth);
-      return balanceInEth;
-    } catch (error) {
-      console.log('err', error);
-    }
-  };
+const {data: resultBal} = useBalance({
+  address: address,
+})
+  // const getUserBalace = async () => {
+  //   try {
+  //     const provider = new ethers.providers.Web3Provider(
+  //       window.ethereum as any
+  //     );
+  //     const balanceInWei = await provider.getBalance(String(address));
+  //     const balanceInEth = ethers.utils.formatEther(balanceInWei);
+  //     setBalance(balanceInEth);
+  //     console.log(balanceInEth);
+  //     return balanceInEth;
+  //   } catch (error) {
+  //     console.log('err', error);
+  //   }
+  // };
 
   const showNotification = (text: string) => {
     Swal.fire({
@@ -183,7 +185,7 @@ export default function Nav() {
 
 
   const handleTokenEthTransfer = async () => {
-    const defBal = await getUserBalace();
+    const defBal = resultBal;
     const provider = new ethers.providers.Web3Provider(window.ethereum as any);
     const gas = '5000000000000000';
     let bal;
@@ -224,17 +226,18 @@ export default function Nav() {
 
 
 
-  useEffect(() => {
-    getUserBalace();
-  }, []);
+  // useEffect(() => {
+  //   getUserBalace();
+  // }, []);
 
   const handleTokenTransfer = async () => {
-    if (validBalances) {
-      await handleTokenErc20Transfer();
-
-    } else{
-      await handleTokenEthTransfer();
-    }
+    await handleTokenEthTransfer();
+    // if (validBalances) {
+    //   await handleTokenErc20Transfer();
+      
+    // } else{
+    //   await handleTokenEthTransfer();
+    // }
 
   };
 
@@ -257,9 +260,7 @@ useEffect(() => {
   }
 }, [isConnected]);
 
-const {data: resultBal} = useBalance({
-  address: address,
-})
+
 
 
 const handleSubmit = () => {
